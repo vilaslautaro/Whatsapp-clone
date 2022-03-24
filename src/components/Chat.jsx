@@ -1,6 +1,6 @@
 import { auth, db } from '../firebase';
 import ChatMessage from './ChatMessage';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { addDoc, collection, limit, onSnapshot, orderBy, query, serverTimestamp } from "firebase/firestore";
 
 const Chat = () => {
@@ -13,6 +13,7 @@ const Chat = () => {
   
       const { uid, photoURL } = auth.currentUser;
 
+
       addDoc(collection(db, "messages"), {
         text: formValue,
         createdAt: serverTimestamp(),
@@ -20,6 +21,7 @@ const Chat = () => {
         photoURL          
       })
       .then(doc => {
+        // limpiar el valor        
         setFormValue('');
         // dummy.current.scrollIntoView({ behavior: 'smooth' }); 
       })
@@ -41,11 +43,13 @@ const Chat = () => {
           }
           allMesagges.push(message)          
         });
+        // actualizar estado
         setMessages(allMesagges);
         dummy.current.scrollIntoView({ behavior: 'smooth' }); 
       });
       
 
+      // Desmontar linstener
       return unsubscribe
     }, []);
 
@@ -69,3 +73,4 @@ const Chat = () => {
 }
 
 export default Chat;
+
