@@ -2,7 +2,7 @@ import './App.css';
 import { auth } from './firebase';
 import { useState, useEffect } from 'react';
 import UserLoggedIn from './components/UserLoggedIn';
-import SignOut from './components/SignOut';
+import SingOut from './components/SingOut';
 import Chat from './components/Chat';
 import Welcome from './components/Welcome';
 import WebFont from 'webfontloader';
@@ -42,8 +42,8 @@ const App = () => {
   return (
     <div className="App">
       <header>
-        <h1>{user ? <UserLoggedIn /> : "ChatApp Lite"}</h1>
-        <SignOut />
+        <h1>{user ? <UserLoggedIn /> : "React Whatsapp"}</h1>
+        <SingOut />
       </header>
       <section>
         {user ? <Chat /> : <Welcome /> }

@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import SignIn from './SignIn';
+import SingIn from './SingIn';
 import configWhatsapp from '../lotties/lotties.js';
 
 
@@ -9,7 +9,7 @@ const Welcome = () => {
     return (
         <main>
             <Lottie { ...configWhatsapp } />            
-            <SignIn />
+            <SingIn />
         </main>
     );
 }
