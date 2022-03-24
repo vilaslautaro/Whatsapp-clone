@@ -1,7 +1,7 @@
 import React from 'react';
 import Lottie from 'lottie-react';
-import SignIn from './SignIn';
-import configWhatsapp from '../assets/Lotties/lotties';
+import SingIn from './SingIn';
+import configWhatsapp from '../lotties/lotties.js';
 
 
 const Welcome = () => { 
@@ -9,7 +9,7 @@ const Welcome = () => {
     return (
         <main>
             <Lottie { ...configWhatsapp } />            
-            <SignIn />
+            <SingIn />
         </main>
     );
 }
