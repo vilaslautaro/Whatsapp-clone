@@ -1,6 +1,4 @@
-import whatsapp from './lottiesJson/whatsapp.json'
-
-
+import whatsapp from './whatsapp.json'
 
 const configWhatsapp = {
     animationData: whatsapp,

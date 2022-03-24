@@ -43,7 +43,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: rgb(40, 37, 53);
-  background:  url('./assets/images/bg.jpeg') repeat center;
+  background:  url('https://res.cloudinary.com/dn7qsxzdf/image/upload/v1648143251/react-clone-whatsapp/bg_v0coax.jpg') repeat center;
 }
 
 main {
