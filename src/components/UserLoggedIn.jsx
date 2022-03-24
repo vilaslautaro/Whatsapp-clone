@@ -1,1 +1,12 @@
-// para mostrar sus datos (si es que esta loggeado)
+import { auth } from '../firebase'
+
+const UserLoggedIn = () => {
+    const { displayName, photoURL } = auth.currentUser
+    return (
+        <>
+            <img src={photoURL} alt="avatar" /> {displayName}
+        </>
+    )
+}
+
+export default UserLoggedIn

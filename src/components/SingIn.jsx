@@ -1,12 +1,12 @@
 import googleLogo from '../Assets/Images/googleicon.png'
 import { signInWithPopup } from 'firebase/auth'
-import { auth, googleProvider } from '../firebase'
+import { auth, GoogleProvider } from '../firebase'
 
 const SignIn = () => {
 
 
     const signIntWithGoogle = () => {
-        signInWithPopup(auth, googleProvider)
+        signInWithPopup(auth, GoogleProvider)
         .then( res => {
             console.log(res)
         })

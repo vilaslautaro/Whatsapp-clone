@@ -41,7 +41,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-color: rgb(40, 37, 53);
-    background:  url('/src/Assets/Images/backgroundWhatsapp.jpg') repeat center;
+    background:  url('/src/Assets/Images/bg.jpeg') repeat center;
   }
   
   .welcome {
