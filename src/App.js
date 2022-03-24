@@ -1,50 +1,52 @@
 import './App.css';
-import { useEffect, useState } from 'react';
-// import ChatMessage from 'components/ChatMessage'
-import Welcome from './components/Welcome'
-import SignOut from './components/SingOut';
+import { auth } from './firebase';
+import { useState, useEffect } from 'react';
 import UserLoggedIn from './components/UserLoggedIn';
-import WebFont from 'webfontloader'
-import { auth } from './firebase'
+import SignOut from './components/SignOut';
+import Chat from './components/Chat';
+import Welcome from './components/Welcome';
+import WebFont from 'webfontloader';
+
 
 const App = () => {
 
   const [user, setUser] = useState(() => auth.currentUser)
-  const [init, setInit] = useState(true)
-
+  const [init, setInit] = useState(true);
 
   useEffect(() => {
     WebFont.load({
       google: {
         families: ['Open Sans']
       }
-    })
-  },[])
-
+    });
+   }, []);
+   
+   
   useEffect(() => {
-    const userListener = auth.onAuthStateChanged( user => {
-      if(user){
+    
+    const userListener = auth.onAuthStateChanged(user => {
+      if (user) {
         setUser(user)
-      } else{
+      } else {
         setUser(false)
+      }
+
+      if (init) {
+        setInit(false)
       }
     })
 
-    if(init){
-      setInit(false)
-    }
-
     return userListener
-  }, [init])
+  }, [init]);
 
   return (
-    <div className="container">
-      <header className="header">
-        <h1>{ user ? <UserLoggedIn /> : 'Whatsapp Lite' } </h1>
+    <div className="App">
+      <header>
+        <h1>{user ? <UserLoggedIn /> : "ChatApp Lite"}</h1>
         <SignOut />
       </header>
       <section>
-        { user ? "Aca va el chat" : <Welcome />}
+        {user ? <Chat /> : <Welcome /> }
       </section>
     </div>
   );
