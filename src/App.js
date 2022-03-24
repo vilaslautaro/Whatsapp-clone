@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+// import ChatMessage from 'components/ChatMessagex'
+import Welcome from './components/Welcome'
+import WebFont from 'webfontloader'
 
-function App() {
+const App = () => {
+
+
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Open Sans']
+      }
+    })
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header className="header">
+        <h1>Whatsapp Lite</h1>
       </header>
+      <section>
+        <Welcome />
+      </section>
     </div>
   );
 }
