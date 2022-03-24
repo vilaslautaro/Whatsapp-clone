@@ -43,7 +43,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: rgb(40, 37, 53);
-  background:  url('./Assets/Images/bg.jpeg') repeat center;
+  background:  url('./assets/images/bg.jpeg') repeat center;
 }
 
 main {
@@ -177,10 +177,6 @@ header img {
   margin:  0 auto;
 }
 .google-logo {
+  width: 30px;
   margin-right: 10px;
 }
-
-  .logoGoogle {
-    width: 30px;
-    margin-right: 10px;
-  }
