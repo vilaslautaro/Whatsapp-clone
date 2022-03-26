@@ -5,7 +5,7 @@ const UserLoggedIn = () => {
     const {displayName, photoURL } = auth.currentUser;
     return (
         <>
-           <img src={photoURL} alt="avatar" /> {displayName} 
+           <img src={photoURL} alt="avatar" className='imgLoggedIn' /> <span className='nameLoggedIn'>{displayName}</span> 
         </>
     );
 }

@@ -36,6 +36,10 @@ body {
   margin-right: 15px;
 }
 
+.App header .nameLoggedIn{
+  font-size: 20px;
+}
+
 .App section {
   margin-top: 30px;
   display: flex;
@@ -124,9 +128,6 @@ button:disabled {
   margin: 0 auto;
 }
 
-
-
-
 ul, li {
   text-align: left;
   list-style: none;
@@ -181,4 +182,34 @@ header img {
 .google-logo {
   width: 30px;
   margin-right: 10px;
+}
+
+.lottie{
+  width: 25%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 450px) {
+  .container__signIn{ 
+    display: grid;
+    justify-content: center;
+  }
+  .sign-in{
+    font-size: 17px;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 20px;
+  }
+
+  .sign-in__texto{
+    margin-top: 10px;
+  }
+
+  .lottie{
+    width: 50%;
+  }
+  .App header .nameLoggedIn{
+    font-size: 16px;
+  }
+
 }

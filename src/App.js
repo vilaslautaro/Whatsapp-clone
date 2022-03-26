@@ -2,7 +2,7 @@ import './App.css';
 import { auth } from './firebase';
 import { useState, useEffect } from 'react';
 import UserLoggedIn from './components/UserLoggedIn';
-import SingOut from './components/SingOut';
+import SingOut from './components/SignOut';
 import Chat from './components/Chat';
 import Welcome from './components/Welcome';
 import WebFont from 'webfontloader';
